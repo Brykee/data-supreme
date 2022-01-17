@@ -1,5 +1,6 @@
 import logo from './mungus.gif';
 import './App.css';
+import Typescripting from './Typescripting';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         >
           Don't click
         </a>
+        <Typescripting />
       </header>
     </div>
   );
