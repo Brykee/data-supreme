@@ -72,6 +72,80 @@ function Typescripting() {
   //     }
   //   }
 
+  // Type Inference
+
+  //   var a = "some text";
+  //   var b = 123;
+  //   a = b;
+  // Compiler Error: Type 'number' is not assignable to type 'string'
+
+  // Type Casting
+  // Example:
+  // To assign the length of a string stored in a variable declared as 'any' to a variable declared as 'number'.
+
+  // let helloWorld: any = "Hello world!";
+
+  // let strLength: number = (<string>helloWorld).length;
+
+  // let helloWorld: any = "Hello world!";
+
+  // let strLength: number = (helloWorld as string).length;
+
+  // let vs. var
+
+  // let is Block scoped
+  // let num1:number = 1;
+
+  // if (num2 > num1) {
+  //     let num3: number = 3;
+  //     num3++;
+  // }
+
+  // - let variables cannot be read or written to before they are declared.
+
+  // - let variables cannot be re-declared
+
+  // Const
+
+  // same scoping rules as let, the difference is that a const value cannot be changed.
+
+  // const num:number;
+  // Compiler Error: const declaration must be initialized
+  // num = 100;
+
+  // //  Destructuring & Spread  // //
+
+  // Array Destructuring
+
+  //   let students = ['Ben', 'Reba'];
+  //   let [first, second, third = 'Logan'] = students;
+
+  //   console.log(first); // 'Ben'
+  //   console.log(second); // 'Reba'
+  //   console.log(third); // 'Logan'
+
+  //   How to swap two variables without using a third one.
+  //   var x = 1, y = 2;
+  //   [x, y] = [y, x];
+  //   console.log(x, y); // 2,1
+
+  // Object Destructuring
+
+  // API response
+  // {
+  //    gender: 'male',
+  //    age: 6
+  // }
+
+  // interface Person {
+  //     gender: string
+  //     age: number
+  //   }
+  //   const { gender, age }: Person = response;
+  //   const person: Person = response; // person.gender, person.age
+
+  // Property Renaming
+
   return (
     <div className="Script">
       <header className="Script-header">
