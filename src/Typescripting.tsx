@@ -1,15 +1,19 @@
 import './App.css';
-
+// type Employee = {
+//   name: string;
+//   age: number;
+//   code?: number;
+// };
 function Typescripting() {
   //   let employee = {};
   //   employee.code = 10;
   //   employee.name = 'John';
 
-  //   let employee = {
-  //     code: 10,
-  //     name: 'John',
-  //   };
-  //   console.log(employee);
+  // let employee: Employee = {
+  //   name: 'John',
+  //   age: 4,
+  // };
+  // console.log(employee);
 
   //   Basic Data Types
   // let isDone: boolean = false;
@@ -129,7 +133,13 @@ function Typescripting() {
   //   [x, y] = [y, x];
   //   console.log(x, y); // 2,1
 
-  // Object Destructuring
+  // Spread:
+
+  // let first = [1, 2];
+  // let second = [3, 4];
+  // let bothPlus = [0, ...first, ...second, 5];
+
+  // Object Destructuring:
 
   // API response
   // {
@@ -144,7 +154,85 @@ function Typescripting() {
   //   const { gender, age }: Person = response;
   //   const person: Person = response; // person.gender, person.age
 
-  // Property Renaming
+  // Property Renaming:
+
+  // interface SmallPerson {
+  //   name: string;
+  //   age: number;
+  //   height: string;
+  // }
+
+  // const personObject: SmallPerson = {
+  //   age: 29,
+  //   height: "4'5",
+  //   name: 'Frank',
+  // };
+
+  // const { name: personName, age: personAge } = personObject;
+
+  // console.log(personAge);
+
+  // Default Values
+  // function applyDiscount(price: number, discount: number = 0.05) {
+  //   return price * (1 - discount);
+  // }
+
+  // console.log(applyDiscount(100));
+
+  // // Classes in TypeScript // //
+
+  // class Person {
+  //   age: number;
+  //   instantiatedAt = new Date();
+  //   static humanity: boolean = true;
+
+  //   constructor(name: string, age: number) {
+  //     console.log(`Constructor called with name = ${name}`);
+  //     this.age = age;
+  //   }
+  // }
+
+  // const personInstance = new Person('Adam', 25);
+
+  // console.log(personInstance);
+  // //visible on the class rather than the instance
+  // console.log(Person.humanity);
+
+  // Abstract classes
+  // mainly for inheritance where other classes may derive from them. You cannot create an instance of an abstract class.
+
+  // abstract class Person {
+  //   name: string;
+
+  //   constructor(name: string) {
+  //     this.name = name;
+  //   }
+
+  //   display(): void {
+  //     console.log(this.name);
+  //   }
+
+  //   abstract find(name: string): Person;
+  // }
+
+  // class Employee extends Person {
+  //   empCode: number;
+
+  //   constructor(name: string, code: number) {
+  //     super(name); // must call super()
+  //     this.empCode = code;
+  //   }
+
+  //   find(name: string): Person {
+  //     // execute AJAX request to find an employee from a db
+  //     return new Employee(name, 1);
+  //   }
+  // }
+
+  // let emp: Person = new Employee('James', 100);
+  // emp.display(); //James
+
+  // let emp2: Person = emp.find('Steve');
 
   return (
     <div className="Script">

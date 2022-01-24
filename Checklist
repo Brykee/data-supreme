@@ -1,0 +1,61 @@
+`Defend the utility of TypeScript`
+JavaScript only truly provides dynamic typing - running the code to see what happens.
+
+The alternative is to use a static type system to make predictions about what code is expected BEFORE it runs.
+
+(Example:
+const message = "hello!";
+
+message();
+
+Error: This expression is not callable.
+Type 'String' has no call signatures.)
+
+`Explain the principle benefits of TypeScript`
+
+- ensures reliability and scalability
+- ensures code works as expected
+- helps in hunting down bugs and errors
+- helps in properly documenting code.
+
+`Setup the Environment for TypeScript`
+
+- npx create-react-app name-of-app --template typescript
+
+- npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+- npm i -g typescript
+
+- check version: tsc -v
+
+`Setup Babel to compile TypeScript as part of build`
+I ejected create-React-app to be able to show where the code to compile trypscript is.
+(config/webpack.config)
+
+`Convert an existing JavaScript file/function to TypeScript`
+Typescripting.tsx
+
+`Utilize various datatypes in TypeScript:`
+Basic Data Types
+Arrays
+Tuples
+Enum
+Any and void
+null and undefined
+Type Inference
+Type Casting
+Difference between let and var
+Const declaration
+
+`Utilize destructuring & spread`
+Array Destructuring
+Object Destructuring
+Property renaming
+Default Values
+
+`Utilize classes in TypeScript:`
+Writing and Using Classes
+Constructor method
+Inheritance of classes
+Static Properties
+Abstract class
