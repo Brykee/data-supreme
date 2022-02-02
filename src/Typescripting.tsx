@@ -61,14 +61,26 @@ function Typescripting() {
   //   console.log(colorName);
 
   //   Any
-  // The convenience of any comes at the cost of losing type safety. Type safety is one of the main motivations for using TypeScript and you should try to avoid using any when not necessary.
+  // The convenience of any comes at the cost of losing type safety. Type safety is one of the main motivations for using TypeScript and you should
+  // try to avoid using any when not necessary.
 
   //   let anyValue: any = 'whatever';
   //   anyValue.do.something.stupid();
 
+  // Void
+  // Use the void type as the return type of functions that do not return any value.
+
+  //   function log(message): void {
+  //     console.log(messsage);
+  // }
+
   // Uwnknown
-  //   let unknownValue: unknown = 'uhhhhhh';
-  //   unknownValue.do.something.stupid();
+  //forces you to determine what a variable typed as unknown is
+  // const x: unknown = 1;
+
+  // if(typeof x === "number") {
+  //   console.log(x * x);
+  // }
 
   // Null and Undefined
   // With strictNullChecks off, values that might be null or undefined can still be accessed normally.
@@ -85,7 +97,7 @@ function Typescripting() {
 
   // Type Inference
 
-  //   var a = "some text";
+  //   var a: = "some text";
   //   var b = 123;
   //   a = b;
   // Compiler Error: Type 'number' is not assignable to type 'string'
@@ -97,20 +109,20 @@ function Typescripting() {
   // let helloWorld: any = "Hello world!";
 
   // let strLength: number = (<string>helloWorld).length;
-
+  // or
   // let helloWorld: any = "Hello world!";
 
   // let strLength: number = (helloWorld as string).length;
 
   // let vs. var
 
-  // let is Block scoped
-  // let num1:number = 1;
+  // calling var z before definition will return undefined
+  // document.write(z, "\n");
+  // var z = 2;
 
-  // if (num2 > num1) {
-  //     let num3: number = 3;
-  //     num3++;
-  // }
+  // calling let a before definition will give error
+  // document.write(a);
+  // let a = 3;
 
   // - let variables cannot be read or written to before they are declared.
 
@@ -130,6 +142,9 @@ function Typescripting() {
 
   // let students: string[] = ['Ben', 'Reba'];
   // let [first, second, third = 'Logan'] = students;
+
+  // let ages: number[] = [22, 44, 77];
+  // let [prettyCool, eh, woah] = ages;
 
   // console.log(first); // 'Ben'
   // console.log(second); // 'Reba'
@@ -151,8 +166,13 @@ function Typescripting() {
   // API response
   // {
   //    gender: 'male',
-  //    age: 6
+  //    age: 25
   // }
+
+  //destructured
+  // const { gender, age }: { gender: string; age: number } = response;
+
+  // or
 
   // interface Person {
   //     gender: string
@@ -180,6 +200,8 @@ function Typescripting() {
   // console.log(personAge);
 
   // Default Values
+  //if you dont pass a discount argument you get the default.
+
   // function applyDiscount(price: number, discount: number = 0.05) {
   //   return price * (1 - discount);
   // }
