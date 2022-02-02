@@ -1,3 +1,4 @@
+import { create } from 'domain';
 import './App.css';
 // type Employee = {
 //   name: string;
@@ -224,44 +225,57 @@ function Typescripting() {
   // const personInstance = new Person('Adam', 25);
 
   // console.log(personInstance);
-  // //visible on the class rather than the instance
+  // // visible on the class rather than the instance
   // console.log(Person.humanity);
+
+  // class Enemy {
+  //   age: number;
+  //   name: string;
+  //   isCartoon: boolean;
+  //   static evil: boolean = true;
+  //   constructor(age: number, name: string, isCartoon: boolean) {
+  //     this.age = age;
+  //     this.name = name;
+  //     this.isCartoon = isCartoon;
+  //   }
+  // }
+
+  // const Gru = new Enemy(44, 'Gru', true);
+  // const Plankton = new Enemy(20, 'Plankton', true);
+
+  // console.log(Gru.name);
+  // console.log(Plankton.isCartoon);
+  // console.log(Gru);
 
   // Abstract classes
   // mainly for inheritance where other classes may derive from them. You cannot create an instance of an abstract class.
 
-  // abstract class Person {
-  //   name: string;
+  // abstract class StreetFighter {
+  //   constructor() {}
 
-  //   constructor(name: string) {
-  //     this.name = name;
+  //   jumps() {
+  //     console.log(`${this.name} jumps.`);
+  //   }
+  //   fight() {
+  //     console.log(`${this.name} attacks with ${this.getSpecialAttack()}!`);
   //   }
 
-  //   display(): void {
-  //     console.log(this.name);
-  //   }
-
-  //   abstract find(name: string): Person;
+  //   abstract getSpecialAttack(): string;
+  //   abstract get name(): string;
   // }
 
-  // class Employee extends Person {
-  //   empCode: number;
-
-  //   constructor(name: string, code: number) {
-  //     super(name); // must call super()
-  //     this.empCode = code;
+  // class Ryu extends StreetFighter {
+  //   getSpecialAttack(): string {
+  //     return 'Hadoken';
   //   }
-
-  //   find(name: string): Person {
-  //     // execute AJAX request to find an employee from a db
-  //     return new Employee(name, 1);
+  //   get name(): string {
+  //     return 'Ryu';
   //   }
   // }
 
-  // let emp: Person = new Employee('James', 100);
-  // emp.display(); //James
-
-  // let emp2: Person = emp.find('Steve');
+  // const ryu = new Ryu();
+  // ryu.fight();
+  // ryu.jumps();
 
   return (
     <div className="Script">
