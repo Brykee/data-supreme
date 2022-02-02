@@ -28,8 +28,14 @@ function Typescripting() {
 
   // Arrays:
   // let list: number[] = [1, 2, 3];
+  // let myWorstDays: string[] = ['Thursday', 'Friday'];
+  // console.log(list[0])
 
   //Tuple:
+  // to use when we know exactly how many types we want to allow in an array.
+
+  // let contact: [string, number] = ['utbry@email.com', 6150490034];
+
   // var empId: number = 1;
   // var empName: string = "Steve";
 
@@ -42,6 +48,7 @@ function Typescripting() {
   // employee[1]; // returns "Steve"
 
   //Enum
+  // makes it easier to handle named sets of constants.
 
   //   enum Color {
   //     Red = 1,
@@ -121,12 +128,12 @@ function Typescripting() {
 
   // Array Destructuring
 
-  //   let students = ['Ben', 'Reba'];
-  //   let [first, second, third = 'Logan'] = students;
+  // let students: string[] = ['Ben', 'Reba'];
+  // let [first, second, third = 'Logan'] = students;
 
-  //   console.log(first); // 'Ben'
-  //   console.log(second); // 'Reba'
-  //   console.log(third); // 'Logan'
+  // console.log(first); // 'Ben'
+  // console.log(second); // 'Reba'
+  // console.log(third); // 'Logan'
 
   //   How to swap two variables without using a third one.
   //   var x = 1, y = 2;
