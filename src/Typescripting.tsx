@@ -77,6 +77,7 @@ function Typescripting() {
 
   // Uwnknown
   //forces you to determine what a variable typed as unknown is
+
   // const x: unknown = 1;
 
   // if(typeof x === "number") {
@@ -165,13 +166,13 @@ function Typescripting() {
   // Object Destructuring:
 
   // API response
-  // {
-  //    gender: 'male',
-  //    age: 25
-  // }
+  // let response = {
+  //   gender: 'male',
+  //   age: 25,
+  // };
 
-  //destructured
-  // const { gender, age }: { gender: string; age: number } = response;
+  // // destructured
+  // let { gender, age }: { gender: string; age: number } = response;
 
   // or
 
