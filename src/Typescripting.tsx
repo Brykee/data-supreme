@@ -128,8 +128,6 @@ function Typescripting() {
 
   // - let variables cannot be read or written to before they are declared.
 
-  // - let variables cannot be re-declared
-
   // Const
 
   // same scoping rules as let, the difference is that a const value cannot be changed.
@@ -141,6 +139,19 @@ function Typescripting() {
   // //  Destructuring & Spread  // //
 
   // Array Destructuring
+
+  // let people: boolean[] = [true, false, true];
+
+  // let [isCool, isHungry, isAlive] = people;
+
+  // console.log(isCool);
+
+  // let object: { name: string; age: number } = {
+  //   name: 'Dave',
+  //   age: 74,
+  // };
+
+  // const { name: newName, age = 1 } = object;
 
   // let students: string[] = ['Ben', 'Reba'];
   // let [first, second, third = 'Logan'] = students;
@@ -212,7 +223,7 @@ function Typescripting() {
 
   // // Classes in TypeScript // //
 
-  // class Person {
+  // abstract class Person {
   //   age: number;
   //   instantiatedAt = new Date();
   //   static humanity: boolean = true;
@@ -222,7 +233,14 @@ function Typescripting() {
   //     this.age = age;
   //   }
   // }
-
+  // class Employee extends Person {
+  //   isHired: boolean = true;
+  //   constructor(name: string, age: number, isHired: boolean) {
+  //     super(name, age);
+  //     this.isHired = isHired;
+  //   }
+  // }
+  // const Bob = new Employee('Bob', 73, true);
   // const personInstance = new Person('Adam', 25);
 
   // console.log(personInstance);
